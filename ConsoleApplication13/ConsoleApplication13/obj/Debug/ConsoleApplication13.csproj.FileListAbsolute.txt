@@ -1,0 +1,6 @@
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.pdb
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.csprojResolveAssemblyReference.cache
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
+E:\c#练习\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb

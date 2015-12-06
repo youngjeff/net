@@ -1,0 +1,6 @@
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\bin\Debug\ConsoleApplication9.exe.config
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\bin\Debug\ConsoleApplication9.exe
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\bin\Debug\ConsoleApplication9.pdb
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\obj\Debug\ConsoleApplication9.csprojResolveAssemblyReference.cache
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\obj\Debug\ConsoleApplication9.exe
+E:\c#练习\ConsoleApplication9\ConsoleApplication9\obj\Debug\ConsoleApplication9.pdb

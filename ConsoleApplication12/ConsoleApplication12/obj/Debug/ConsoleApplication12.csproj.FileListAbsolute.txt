@@ -1,0 +1,5 @@
+E:\c#练习\ConsoleApplication12\ConsoleApplication12\bin\Debug\ConsoleApplication12.exe.config
+E:\c#练习\ConsoleApplication12\ConsoleApplication12\bin\Debug\ConsoleApplication12.exe
+E:\c#练习\ConsoleApplication12\ConsoleApplication12\bin\Debug\ConsoleApplication12.pdb
+E:\c#练习\ConsoleApplication12\ConsoleApplication12\obj\Debug\ConsoleApplication12.exe
+E:\c#练习\ConsoleApplication12\ConsoleApplication12\obj\Debug\ConsoleApplication12.pdb
