@@ -256,7 +256,7 @@ namespace _2048
         } //显示方块的主界面的重绘事件，其中加入了刷新当前成绩的语句，确保当前成绩及时刷新
         private void classSave()
         {
-            FileStream fw = new FileStream("D:\\2048记录", FileMode.Create, FileAccess.Write);
+            FileStream fw = new FileStream("E:\\2048记录", FileMode.Create, FileAccess.Write);
             BinaryFormatter formatter_w = new BinaryFormatter();
             formatter_w.Serialize(fw, c);
 
@@ -265,7 +265,7 @@ namespace _2048
         }//序列化Class1类，并保存，相当于存档
         private void ToLoad()
         {
-            FileStream fr = new FileStream("D:\\2048记录", FileMode.Open, FileAccess.Read);
+            FileStream fr = new FileStream("E:\\2048记录", FileMode.Open, FileAccess.Read);
             
             BinaryFormatter formatter_r = new BinaryFormatter();
             c = (Class1)formatter_r.Deserialize(fr);
