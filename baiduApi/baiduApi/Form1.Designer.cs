@@ -31,27 +31,31 @@
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.btnGetLocation = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.latLabel = new System.Windows.Forms.Label();
             this.lngLabel = new System.Windows.Forms.Label();
+            this.latLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnOpenDistance = new System.Windows.Forms.Button();
-            this.btnDraw = new System.Windows.Forms.Button();
-            this.btnResult = new System.Windows.Forms.Button();
-            this.resultLabel = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnNoDraw = new System.Windows.Forms.Button();
-            this.btnGetPosition = new System.Windows.Forms.Button();
             this.mylngLabel = new System.Windows.Forms.Label();
-            this.mylatLabel = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnGetBrower = new System.Windows.Forms.Button();
-            this.btnInformation = new System.Windows.Forms.Button();
+            this.mylatsLabel = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.地图功能空间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDistanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drawPointToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeDrawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getReultToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.getPositonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.browerIPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.resultLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.positonlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,9 +64,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.webBrowser1);
-            this.panel1.Location = new System.Drawing.Point(1, 12);
+            this.panel1.Location = new System.Drawing.Point(1, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(581, 473);
+            this.panel1.Size = new System.Drawing.Size(581, 457);
             this.panel1.TabIndex = 0;
             // 
             // webBrowser1
@@ -70,45 +74,32 @@
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(3, 0);
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(575, 482);
+            this.webBrowser1.Size = new System.Drawing.Size(575, 463);
             this.webBrowser1.TabIndex = 0;
             this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
-            // btnGetLocation
-            // 
-            this.btnGetLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetLocation.Location = new System.Drawing.Point(629, 39);
-            this.btnGetLocation.Name = "btnGetLocation";
-            this.btnGetLocation.Size = new System.Drawing.Size(101, 23);
-            this.btnGetLocation.TabIndex = 1;
-            this.btnGetLocation.Text = "开启实时坐标";
-            this.btnGetLocation.UseVisualStyleBackColor = true;
-            this.btnGetLocation.Click += new System.EventHandler(this.btnGetLocation_Click);
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // latLabel
-            // 
-            this.latLabel.AutoSize = true;
-            this.latLabel.Location = new System.Drawing.Point(292, 497);
-            this.latLabel.Name = "latLabel";
-            this.latLabel.Size = new System.Drawing.Size(0, 12);
-            this.latLabel.TabIndex = 2;
-            // 
             // lngLabel
             // 
             this.lngLabel.AutoSize = true;
-            this.lngLabel.Location = new System.Drawing.Point(55, 497);
+            this.lngLabel.Location = new System.Drawing.Point(275, 497);
             this.lngLabel.Name = "lngLabel";
             this.lngLabel.Size = new System.Drawing.Size(0, 12);
             this.lngLabel.TabIndex = 2;
+            // 
+            // latLabel
+            // 
+            this.latLabel.AutoSize = true;
+            this.latLabel.Location = new System.Drawing.Point(55, 497);
+            this.latLabel.Name = "latLabel";
+            this.latLabel.Size = new System.Drawing.Size(0, 12);
+            this.latLabel.TabIndex = 2;
             // 
             // label4
             // 
@@ -119,58 +110,6 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "经度：";
             // 
-            // btnOpenDistance
-            // 
-            this.btnOpenDistance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpenDistance.BackColor = System.Drawing.SystemColors.Control;
-            this.btnOpenDistance.Location = new System.Drawing.Point(629, 104);
-            this.btnOpenDistance.Name = "btnOpenDistance";
-            this.btnOpenDistance.Size = new System.Drawing.Size(101, 23);
-            this.btnOpenDistance.TabIndex = 3;
-            this.btnOpenDistance.Text = "开启测距工具";
-            this.btnOpenDistance.UseVisualStyleBackColor = false;
-            this.btnOpenDistance.Click += new System.EventHandler(this.btnOpenDistance_Click);
-            // 
-            // btnDraw
-            // 
-            this.btnDraw.Location = new System.Drawing.Point(0, 20);
-            this.btnDraw.Name = "btnDraw";
-            this.btnDraw.Size = new System.Drawing.Size(101, 23);
-            this.btnDraw.TabIndex = 4;
-            this.btnDraw.Text = "绘制点线面";
-            this.btnDraw.UseVisualStyleBackColor = true;
-            this.btnDraw.Click += new System.EventHandler(this.btnDraw_Click);
-            // 
-            // btnResult
-            // 
-            this.btnResult.Location = new System.Drawing.Point(0, 121);
-            this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(101, 23);
-            this.btnResult.TabIndex = 5;
-            this.btnResult.Text = "获取结果";
-            this.btnResult.UseVisualStyleBackColor = true;
-            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
-            // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(125, 126);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(0, 12);
-            this.resultLabel.TabIndex = 6;
-            // 
-            // btnClear
-            // 
-            this.btnClear.Location = new System.Drawing.Point(0, 175);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(101, 23);
-            this.btnClear.TabIndex = 7;
-            this.btnClear.Text = "清除界面";
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -180,92 +119,154 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "维度：";
             // 
-            // btnNoDraw
-            // 
-            this.btnNoDraw.Location = new System.Drawing.Point(0, 69);
-            this.btnNoDraw.Name = "btnNoDraw";
-            this.btnNoDraw.Size = new System.Drawing.Size(101, 23);
-            this.btnNoDraw.TabIndex = 8;
-            this.btnNoDraw.Text = "关闭绘制点线面";
-            this.btnNoDraw.UseVisualStyleBackColor = true;
-            this.btnNoDraw.Click += new System.EventHandler(this.btnNoDraw_Click);
-            // 
-            // btnGetPosition
-            // 
-            this.btnGetPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetPosition.Location = new System.Drawing.Point(629, 405);
-            this.btnGetPosition.Name = "btnGetPosition";
-            this.btnGetPosition.Size = new System.Drawing.Size(101, 23);
-            this.btnGetPosition.TabIndex = 9;
-            this.btnGetPosition.Text = "获取当前坐标";
-            this.btnGetPosition.UseVisualStyleBackColor = true;
-            this.btnGetPosition.Click += new System.EventHandler(this.btnGetPosition_Click);
-            // 
             // mylngLabel
             // 
             this.mylngLabel.AutoSize = true;
-            this.mylngLabel.Location = new System.Drawing.Point(754, 473);
+            this.mylngLabel.Location = new System.Drawing.Point(547, 497);
             this.mylngLabel.Name = "mylngLabel";
             this.mylngLabel.Size = new System.Drawing.Size(0, 12);
             this.mylngLabel.TabIndex = 10;
             // 
-            // mylatLabel
+            // mylatsLabel
             // 
-            this.mylatLabel.AutoSize = true;
-            this.mylatLabel.Location = new System.Drawing.Point(868, 473);
-            this.mylatLabel.Name = "mylatLabel";
-            this.mylatLabel.Size = new System.Drawing.Size(0, 12);
-            this.mylatLabel.TabIndex = 11;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnResult);
-            this.groupBox1.Controls.Add(this.btnClear);
-            this.groupBox1.Controls.Add(this.btnNoDraw);
-            this.groupBox1.Controls.Add(this.btnDraw);
-            this.groupBox1.Controls.Add(this.resultLabel);
-            this.groupBox1.Location = new System.Drawing.Point(629, 159);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(173, 209);
-            this.groupBox1.TabIndex = 12;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "绘制点的控件";
-            // 
-            // btnGetBrower
-            // 
-            this.btnGetBrower.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGetBrower.Location = new System.Drawing.Point(629, 462);
-            this.btnGetBrower.Name = "btnGetBrower";
-            this.btnGetBrower.Size = new System.Drawing.Size(101, 23);
-            this.btnGetBrower.TabIndex = 13;
-            this.btnGetBrower.Text = "获取浏览器IP";
-            this.btnGetBrower.UseVisualStyleBackColor = true;
-            this.btnGetBrower.Click += new System.EventHandler(this.btnGetBrower_Click);
-            // 
-            // btnInformation
-            // 
-            this.btnInformation.Location = new System.Drawing.Point(808, 38);
-            this.btnInformation.Name = "btnInformation";
-            this.btnInformation.Size = new System.Drawing.Size(122, 24);
-            this.btnInformation.TabIndex = 14;
-            this.btnInformation.Text = "坐标信息范例";
-            this.btnInformation.UseVisualStyleBackColor = true;
-            this.btnInformation.Click += new System.EventHandler(this.btnInformation_Click);
+            this.mylatsLabel.AutoSize = true;
+            this.mylatsLabel.Location = new System.Drawing.Point(486, 497);
+            this.mylatsLabel.Name = "mylatsLabel";
+            this.mylatsLabel.Size = new System.Drawing.Size(0, 12);
+            this.mylatsLabel.TabIndex = 11;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(808, 84);
+            this.richTextBox1.Location = new System.Drawing.Point(606, 373);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(178, 167);
-            this.richTextBox1.TabIndex = 15;
+            this.richTextBox1.Size = new System.Drawing.Size(404, 112);
+            this.richTextBox1.TabIndex = 16;
             this.richTextBox1.Text = "";
+            // 
+            // 地图功能空间ToolStripMenuItem
+            // 
+            this.地图功能空间ToolStripMenuItem.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.地图功能空间ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.getLocationToolStripMenuItem,
+            this.openDistanceToolStripMenuItem,
+            this.drawToolStripMenuItem,
+            this.getPositonToolStripMenuItem,
+            this.browerIPToolStripMenuItem});
+            this.地图功能空间ToolStripMenuItem.Name = "地图功能空间ToolStripMenuItem";
+            this.地图功能空间ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.地图功能空间ToolStripMenuItem.Text = "地图功能控件";
+            // 
+            // getLocationToolStripMenuItem
+            // 
+            this.getLocationToolStripMenuItem.Name = "getLocationToolStripMenuItem";
+            this.getLocationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.getLocationToolStripMenuItem.Text = "开启实时坐标";
+            this.getLocationToolStripMenuItem.Click += new System.EventHandler(this.getLocationToolStripMenuItem_Click);
+            // 
+            // openDistanceToolStripMenuItem
+            // 
+            this.openDistanceToolStripMenuItem.Name = "openDistanceToolStripMenuItem";
+            this.openDistanceToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.openDistanceToolStripMenuItem.Text = "开启测距工具";
+            this.openDistanceToolStripMenuItem.Click += new System.EventHandler(this.openDistanceToolStripMenuItem_Click);
+            // 
+            // drawToolStripMenuItem
+            // 
+            this.drawToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.drawPointToolStripMenuItem1,
+            this.closeDrawToolStripMenuItem,
+            this.getReultToolStripMenuItem,
+            this.clearToolStripMenuItem});
+            this.drawToolStripMenuItem.Name = "drawToolStripMenuItem";
+            this.drawToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.drawToolStripMenuItem.Text = "绘制点线面";
+            // 
+            // drawPointToolStripMenuItem1
+            // 
+            this.drawPointToolStripMenuItem1.Name = "drawPointToolStripMenuItem1";
+            this.drawPointToolStripMenuItem1.Size = new System.Drawing.Size(136, 22);
+            this.drawPointToolStripMenuItem1.Text = "绘制点线面";
+            this.drawPointToolStripMenuItem1.Click += new System.EventHandler(this.drawPointToolStripMenuItem1_Click);
+            // 
+            // closeDrawToolStripMenuItem
+            // 
+            this.closeDrawToolStripMenuItem.Name = "closeDrawToolStripMenuItem";
+            this.closeDrawToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.closeDrawToolStripMenuItem.Text = "关闭绘制";
+            this.closeDrawToolStripMenuItem.Click += new System.EventHandler(this.closeDrawToolStripMenuItem_Click);
+            // 
+            // getReultToolStripMenuItem
+            // 
+            this.getReultToolStripMenuItem.Name = "getReultToolStripMenuItem";
+            this.getReultToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.getReultToolStripMenuItem.Text = "获取结果";
+            this.getReultToolStripMenuItem.Click += new System.EventHandler(this.getReultToolStripMenuItem_Click);
+            // 
+            // clearToolStripMenuItem
+            // 
+            this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.clearToolStripMenuItem.Text = "清除界面";
+            this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
+            // 
+            // getPositonToolStripMenuItem
+            // 
+            this.getPositonToolStripMenuItem.Name = "getPositonToolStripMenuItem";
+            this.getPositonToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.getPositonToolStripMenuItem.Text = "获取当前坐标";
+            this.getPositonToolStripMenuItem.Click += new System.EventHandler(this.getPositonToolStripMenuItem_Click);
+            // 
+            // browerIPToolStripMenuItem
+            // 
+            this.browerIPToolStripMenuItem.Name = "browerIPToolStripMenuItem";
+            this.browerIPToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.browerIPToolStripMenuItem.Text = "获取浏览器IP";
+            this.browerIPToolStripMenuItem.Click += new System.EventHandler(this.browerIPToolStripMenuItem_Click);
+            // 
+            // informationToolStripMenuItem
+            // 
+            this.informationToolStripMenuItem.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.informationToolStripMenuItem.Text = "坐标信息范例";
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.地图功能空间ToolStripMenuItem,
+            this.informationToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1022, 25);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Location = new System.Drawing.Point(405, 488);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(0, 12);
+            this.resultLabel.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(606, 56);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 19;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // positonlabel
+            // 
+            this.positonlabel.AutoSize = true;
+            this.positonlabel.Location = new System.Drawing.Point(606, 38);
+            this.positonlabel.Name = "positonlabel";
+            this.positonlabel.Size = new System.Drawing.Size(71, 12);
+            this.positonlabel.TabIndex = 20;
+            this.positonlabel.Text = "请选择地点:";
             // 
             // Form1
             // 
@@ -273,28 +274,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1022, 518);
+            this.Controls.Add(this.positonlabel);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.btnInformation);
-            this.Controls.Add(this.btnGetBrower);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.mylatLabel);
+            this.Controls.Add(this.mylatsLabel);
             this.Controls.Add(this.mylngLabel);
-            this.Controls.Add(this.btnGetPosition);
-            this.Controls.Add(this.btnOpenDistance);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.lngLabel);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.latLabel);
-            this.Controls.Add(this.btnGetLocation);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lngLabel);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,25 +304,29 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.Button btnGetLocation;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label latLabel;
         private System.Windows.Forms.Label lngLabel;
+        private System.Windows.Forms.Label latLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnOpenDistance;
-        private System.Windows.Forms.Button btnDraw;
-        private System.Windows.Forms.Button btnResult;
-        private System.Windows.Forms.Label resultLabel;
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnNoDraw;
-        private System.Windows.Forms.Button btnGetPosition;
         private System.Windows.Forms.Label mylngLabel;
-        private System.Windows.Forms.Label mylatLabel;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnGetBrower;
-        private System.Windows.Forms.Button btnInformation;
+        private System.Windows.Forms.Label mylatsLabel;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.ToolStripMenuItem drawToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem drawPointToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem closeDrawToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getReultToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getPositonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem browerIPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem openDistanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem getLocationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 地图功能空间ToolStripMenuItem;
+        private System.Windows.Forms.Label resultLabel;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label positonlabel;
     }
 }
 
